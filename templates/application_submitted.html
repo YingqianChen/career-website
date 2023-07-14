@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Application Submitted </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <style>
+    #banner {
+      width: 100%;
+      height: 360px;
+      margin-bottom: 16px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+
+<body>
+  {% include 'nav.html' %}
+  <img class='img-fluid' id='banner' src='/static/banner.jpg' />
+  <div class="container">
+    <h1 class="text-center mt-2 mb-4">Quantum Innovations Careers</h1>
+    <p class="text-center">Your application for the role of <b>{{job['title']}}</b> has been submitted!</p>
+    <h4>Full Name</h4>
+    <div class="mb-2">{{application['full_name']}}</div>
+
+    <h4>Email</h4>
+    <div class="mb-2">{{application['email']}}</div>
+
+    <h4>LinkedIn URL</h4>
+    <div class="mb-2">{{application['linkedin_url']}}</div>
+
+    <h4>Education</h4>
+    <div class="mb-2">{{application['education']}}</div>
+
+    <h4>Work Experience</h4>
+    <div class="mb-2">{{application['work_experience']}}</div>
+
+    <h4>Resume URL</h4>
+    <div class="mb-2">{{application['resume_url']}}</div>
+  </div>
+  {% include 'footer.html' %}
+</body>
+
+</html>
